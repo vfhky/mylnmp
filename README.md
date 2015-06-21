@@ -39,12 +39,12 @@ nginx服务控制脚本： [《Nginx服务启动、停止和重启等操作的SH
 
 ##### 2.1.2 PHP目录
 
-php.ini、php-fpm.conf和www.conf配置文件： [PHP7中php.ini、php-fpm和www.conf的配置》](https://typecodes.com/web/php7configure.html '查看原文')
+php.ini、php-fpm.conf和www.conf配置文件： [《PHP7中php.ini、php-fpm和www.conf的配置》](https://typecodes.com/web/php7configure.html '查看原文')
 
 php-fpm服务控制脚本： [《PHP7服务启动、停止和重启等操作的SHELL脚本》](https://typecodes.com/web/php7serviceoptshell.html '查看原文')
 
 ##### 2.1.3 MySql目录
 
-my.cnf配置文件： [《MySql5.7rc之my.cnf的配置》](https://typecodes.com/web/mysql5configure.html '查看原文')
+my.cnf配置文件： [《CentOS系统MySQL的配置文件my.cnf》](https://typecodes.com/web/centosmysqlconfig.html '查看原文')
 
 mysqld服务控制脚本： [《MySql服务启动、停止和重启等操作的SHELL脚本》](https://typecodes.com/web/mysqldserviceoptshell.html '查看原文')
