@@ -33,7 +33,7 @@
 
 ##### 2.1.1 Nginx目录
 
-nginx.conf配置文件： [《2015博客升级记(六)：Nginx配置HTTPS和SPDY实战》](https://typecodes.com/mix/2015updateblog.html '查看原文')
+nginx.conf配置文件： [《2015博客升级记(六)：Nginx配置HTTPS和SPDY实战》](https://typecodes.com/web/centos7nginxhttpsspdy.html '查看原文')
 
 nginx服务控制脚本： [《Nginx服务启动、停止和重启等操作的SHELL脚本》](https://typecodes.com/web/nginxserviceoptshell.html '查看原文')
 
