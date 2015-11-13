@@ -48,3 +48,10 @@ php-fpm服务控制脚本： [《PHP7服务启动、停止和重启等操作的S
 my.cnf配置文件： [《CentOS系统MySQL的配置文件my.cnf》](https://typecodes.com/web/centosmysqlconfig.html '查看原文')
 
 mysqld服务控制脚本： [《MySql服务启动、停止和重启等操作的SHELL脚本》](https://typecodes.com/web/mysqldserviceoptshell.html '查看原文')
+
+
+###2.2 版本v1.0.0.2
+
+-----2015.11.14 00:05更新 `php.ini` 文件：
+
+	1、由于每次升级编译PHP版本的时候，都会在extensions目录下产生对应的动态库文件夹。因此，为了避免每次都修改配置文件，建议把对应版本的动态库文件夹下的所有动态库文件都复制到extensions根目录下。
