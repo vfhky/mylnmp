@@ -54,6 +54,8 @@ case "$1" in
 	start)
 		echo -n "Starting php-fpm "
 
+		mkdir -p /var/run/php-fpm/
+
 		$php_fpm_BIN --daemonize $php_opts
 
 		if [ "$?" != 0 ] ; then
