@@ -55,3 +55,8 @@ mysqld服务控制脚本： [《MySql服务启动、停止和重启等操作的S
 -----2015.11.14 00:05更新 `php.ini` 文件：
 
 	1、由于每次升级编译PHP版本的时候，都会在extensions目录下产生对应的动态库文件夹。因此，为了避免每次都修改配置文件，建议把对应版本的动态库文件夹下的所有动态库文件都复制到extensions根目录下。
+
+-----2015.12.18 12:52添加 `nginx_log_backup.sh` 文件：
+
+	1、可用于备份Nginx、MySQL和PHP的日志以及其它Linux下的应用产生的日志；
+	2、该脚本详细说明见：[《Linux下Nginx、MySQL和PHP等应用的日志切割脚本》](https://typecodes.com/linux/applogsbackup.html '查看原文')
