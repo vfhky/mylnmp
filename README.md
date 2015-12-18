@@ -61,3 +61,7 @@ mysqld服务控制脚本： [《MySql服务启动、停止和重启等操作的S
 	1、可用于备份Nginx、MySQL和PHP的日志以及其它Linux下的应用产生的日志；
 
 该脚本详细说明见：[《Linux下Nginx、MySQL和PHP等应用的日志切割脚本》](https://typecodes.com/linux/applogsbackup.html '查看原文')
+
+-----2015.12.18 15:22添加 `nginx_pelican.conf` 文件：
+
+	1、对于pelican这种静态HTML博客，由于不需要和PHP通信，所以把nginx.conf中的PHP配置部分去掉了。使用时，将其重命名为nginx.conf即可。
