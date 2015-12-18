@@ -2,7 +2,7 @@
 # Backup Log Files for linux applications such as nginx, php, mysql and so on.
 # Crontab Usage: 00 01 * * * /mydata/backups/bak_list/nginx_log_backup.sh >/dev/null 2>&1
 # (c) 2015 vfhky https://typecodes.com/linux/applogsbackup.html
-# https://github.com/vfhky/shell-tools/blob/master/backup/applogsbackup.sh
+# https://github.com/vfhky/mylnmp/blob/master/nginx_log_backup.sh
 
 # Basic command.
 TARCMD="tar -zcf"
