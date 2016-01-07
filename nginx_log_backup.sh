@@ -28,17 +28,17 @@ Shell_Log=${Backup_Dir}/process.log
 
 # Run command functions.
 function ERROR() {
-  echo >/dev/null && echo "[`date +%H:%M:%S:%N`][error] $@" >> ${Shell_Log}
-  exit 1
+	echo >/dev/null && echo "[`date +%H:%M:%S:%N`][error] $@" >> ${Shell_Log}
+	exit 1
 }
 
 function NOTICE() {
-  echo >/dev/null && echo "[`date +%H:%M:%S:%N`][notice] $@" >> ${Shell_Log}
+	echo >/dev/null && echo "[`date +%H:%M:%S:%N`][notice] $@" >> ${Shell_Log}
 }
 
 function RUNCMD() {
-  echo $@ >> ${Shell_Log}
-  eval $@
+	echo "[`date +%H:%M:%S:%N`][notice] $@" >> ${Shell_Log}
+	eval $@
 }
 
 
@@ -57,9 +57,9 @@ function REMOVE_DIR_BY_DATE()
 
 # Check the days user input.You can delete the codes below generally.
 if [[ ! $NUMDAYS =~ ^[0-9]+$ ]]; then
-  ERROR "Invalid number of days[$NUMDAYS]!"
+	ERROR "Invalid number of days[$NUMDAYS]!"
 elif [ "$NUMDAYS" -eq "0" ]; then
-  ERROR "Number of days must be greater than zero!"
+	ERROR "Number of days must be greater than zero!"
 fi
 
 
@@ -79,7 +79,7 @@ RUNCMD "cd ${Source_Log_Dir} && ${TARCMD} ${Previous_Date}.tar.gz *.log"
 
 RC=$?
 if [ $RC -gt 0 ]; then
-  ERROR "Creat the backup package failed!"
+	ERROR "Creat the backup package failed!"
 fi
 
 
@@ -88,7 +88,7 @@ RUNCMD "${MVCMD} ${Previous_Date}.tar.gz ${Backup_Dir}/"
 
 RC=$?
 if [ $RC -gt 0 ]; then
-  ERROR "Move the compress file failed!"
+	ERROR "Move the compress file failed!"
 fi
 
 
@@ -99,7 +99,7 @@ do
     RUNCMD ">$file"
 	RC=$?
 	if [ $RC -gt 0 ]; then
-	  ERROR "Empty every log file failed!"
+		ERROR "Empty every log file failed!"
 	fi
 done
 
