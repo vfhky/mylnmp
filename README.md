@@ -10,19 +10,21 @@
 
 	|Project_dir
 	|
-	|         |----nginx.conf      配置文件
-	|--Nginx--|
-	|         |----nginx	       服务控制脚本
+	|         |----nginx.conf      			配置文件（PHP版本，适合WordPress、Typecho等）
+	|--Nginx--|----nginx_pelican.conf      	配置文件（静态HTML版本，适合Pelican、HEXO等）
+	|         |----nginx	       			服务控制脚本
 	|
-	|         |----php.ini		   配置文件
-	|         |----php-fpm	       服务控制脚本
+	|         |----php.ini		   			配置文件
+	|         |----php-fpm	       			服务控制脚本
 	|---PHP---|
-    |         |----php-fpm.conf    配置文件
-	|		  |----www.conf        配置文件
+    |         |----php-fpm.conf	       	    配置文件
+	|		  |----www.conf        			配置文件
 	|
-	|         |----my.cnf          配置文件
+	|         |----my.cnf          			配置文件
 	|--MySql--|
-	|         |----mysqld	       服务控制脚本
+	|         |----mysqld	       			服务控制脚本
+	|
+	|--nginx_log_backup.sh					每天切割Nginx服务产生的日志文件
 	|
 	|--README.md
 
@@ -65,3 +67,10 @@ mysqld服务控制脚本： [《MySql服务启动、停止和重启等操作的S
 -----2015.12.18 15:22添加 `nginx_pelican.conf` 文件：
 
 	1、对于pelican这种静态HTML博客，由于不需要和PHP通信，所以把nginx.conf中的PHP配置部分去掉了。使用时，将其重命名为nginx.conf即可。
+
+
+###2.3 版本v1.0.0.3
+
+-----2015.12.24 11:23更新 `nginx.conf` 和 `nginx_pelican.conf` 文件：
+	
+	该版本主要是将Google的Spdy3.1功能修改为HTST，也即支持HTTP2。
