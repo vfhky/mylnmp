@@ -33,6 +33,7 @@ start() {
     [ -f $NGINX_CONF_FILE ] || exit 6
     echo -n $"Starting $prog: "
     mkdir -p /var/run/nginx/
+    mkdir -p /var/tmp/nginx/{client,proxy,fastcgi,uwsgi,scgi}
     daemon $nginx -c $NGINX_CONF_FILE
     retval=$?
     echo
